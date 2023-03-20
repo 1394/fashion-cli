@@ -1,0 +1,11 @@
+{
+  "name": "fashion-cli",
+  "version": "1.0.0",
+  "description": "",
+  "bin": {
+    "fashion": "/fashion.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC"
+}
