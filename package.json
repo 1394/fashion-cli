@@ -5,6 +5,13 @@
   "bin": {
     "fashion": "/fashion.js"
   },
+  "files": [
+    "lib",
+    "fashion.js"
+  ],
+  "publishConfig": {
+    "registry": "https://nxs.sigma-it.ru/repository/npm-sigma-release/"
+  },
   "keywords": [],
   "author": "",
   "license": "ISC"
