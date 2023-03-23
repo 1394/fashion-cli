@@ -19332,7 +19332,7 @@ var require_dbcs_data = __commonJS({
       // == Japanese/ShiftJIS ====================================================
       // All japanese encodings are based on JIS X set of standards:
       // JIS X 0201 - Single-byte encoding of ASCII + ¥ + Kana chars at 0xA1-0xDF.
-      // JIS X 0208 - Main set of 6879 characters, placed in 94x94 plane, to be encoded by 2 bytes. 
+      // JIS X 0208 - Main set of 6879 characters, placed in 94x94 plane, to be encoded by 2 bytes.
       //              Has several variations in 1978, 1983, 1990 and 1997.
       // JIS X 0212 - Supplementary plane of 6067 chars in 94x94 plane. 1990. Effectively dead.
       // JIS X 0213 - Extension and modern replacement of 0208 and 0212. Total chars: 11233.
@@ -19349,7 +19349,7 @@ var require_dbcs_data = __commonJS({
       //               0x8F, (0xA1-0xFE)x2 - 0212 plane (94x94).
       //  * JIS X 208: 7-bit, direct encoding of 0208. Byte ranges: 0x21-0x7E (94 values). Uncommon.
       //               Used as-is in ISO2022 family.
-      //  * ISO2022-JP: Stateful encoding, with escape sequences to switch between ASCII, 
+      //  * ISO2022-JP: Stateful encoding, with escape sequences to switch between ASCII,
       //                0201-1976 Roman, 0208-1978, 0208-1983.
       //  * ISO2022-JP-1: Adds esc seq for 0212-1990.
       //  * ISO2022-JP-2: Adds esc seq for GB2313-1980, KSX1001-1992, ISO8859-1, ISO8859-7.
@@ -19460,7 +19460,7 @@ var require_dbcs_data = __commonJS({
       //  * Windows CP 951: Microsoft variant of Big5-HKSCS-2001. Seems to be never public. http://me.abelcheung.org/articles/research/what-is-cp951/
       //  * Big5-2003 (Taiwan standard) almost superset of cp950.
       //  * Unicode-at-on (UAO) / Mozilla 1.8. Falling out of use on the Web. Not supported by other browsers.
-      //  * Big5-HKSCS (-2001, -2004, -2008). Hong Kong standard. 
+      //  * Big5-HKSCS (-2001, -2004, -2008). Hong Kong standard.
       //    many unicode code points moved from PUA to Supplementary plane (U+2XXXX) over the years.
       //    Plus, it has 4 combining sequences.
       //    Seems that Mozilla refused to support it for 10 yrs. https://bugzilla.mozilla.org/show_bug.cgi?id=162431 https://bugzilla.mozilla.org/show_bug.cgi?id=310299
@@ -19471,7 +19471,7 @@ var require_dbcs_data = __commonJS({
       //    In the encoder, it might make sense to support encoding old PUA mappings to Big5 bytes seq-s.
       //    Official spec: http://www.ogcio.gov.hk/en/business/tech_promotion/ccli/terms/doc/2003cmp_2008.txt
       //                   http://www.ogcio.gov.hk/tc/business/tech_promotion/ccli/terms/doc/hkscs-2008-big5-iso.txt
-      // 
+      //
       // Current understanding of how to deal with Big5(-HKSCS) is in the Encoding Standard, http://encoding.spec.whatwg.org/#big5-encoder
       // Unicode mapping (http://www.unicode.org/Public/MAPPINGS/OBSOLETE/EASTASIA/OTHER/BIG5.TXT) is said to be wrong.
       "windows950": "cp950",
@@ -49136,122 +49136,122 @@ var require_Visitor = __commonJS({
            this.visit(node.list, handlers);
            this.visit(node.statements, handlers);
            }
-      
+
            visitFor (node, handlers) {
            this.visit(node.variable, handlers);
            this.visit(node.start, handlers);
            this.visit(node.end, handlers);
            this.visit(node.statements, handlers);
            }
-      
+
            visitFunction (node, handlers) {
            this.visit(node.func, handlers);
            this.visit(node.statements, handlers);
            }
-      
+
            visitRuleset (node, handlers) {
            this.visit(node.selectors, handlers);
            this.visit(node.statements, handlers);
            }
-      
+
            visitMixin (node, handlers) {
            this.visit(node.name, handlers);
            this.visit(node.statements, handlers);
            }
-      
+
            visitInclude (node, handlers) {
            this.visit(node.include, handlers);
            }
-      
+
            visitDeclaration (node, handlers) {
            this.visit(node.property, handlers);
            this.visit(node.value, handlers);
            }
-      
+
            visitVariableAssignment (node, handlers) {
            this.visit(node.value, handlers);
            }
-      
+
            visitIf (node, handlers) {
            this.visit(node.condition, handlers);
            this.visit(node.statements, handlers);
            }
-      
+
            visitElse (node, handlers) {
            this.visit(node.condition, handlers);
            this.visit(node.statements, handlers);
            }
-      
+
            visitReturn (node, handlers) {
            this.visit(node.expr, handlers);
            }
-      
+
            visitParenthetical (node, handlers) {
            this.visit(node.expr, handlers);
            }
-      
+
            visitSelectorPart (node, handlers) {
            this.visit(node.value, handlers);
            }
-      
+
            visitSelectorProperty(node, handlers) {
            this.visit(node.property, handlers);
            this.visit(node.value, handlers);
            }
-      
+
            visitCompoundSelector(node, handlers) {
            this.visit(node.items, handlers);
            }
-      
+
            visitMultiPartSelector(node, handlers) {
            this.visit(node.items, handlers);
            }
-      
+
            visitSelectorList(node, handlers) {
            this.visit(node.items, handlers);
            }
-      
+
            visitBinaryExpression (node, handlers) {
            this.visit(node.left, handlers);
            this.visit(node.right, handlers);
            }
-      
+
            visitUnaryExpression (node, handlers) {
            this.visit(node.expr, handlers);
            }
-      
+
            visitVariable (node, handlers) {
            // no child nodes to descend
            }
-      
+
            visitConstant (node, handlers) {
            // no child nodes to descend
            }
-      
+
            visitFunctionCall (node, handlers) {
            this.visit(node.args, handlers);
            }
-      
+
            visitExtend (node, handlers) {
            // no child nodes to descend
            }
-      
+
            visitList (node, handlers) {
            this.visit(node.items, handlers);
            }
-      
+
            visitWarn (node, handlers) {
            // no child nodes to descend
            }
-      
+
            visitImport (node, handlers) {
            this.visit(node.source, handlers);
            }
-      
+
            visitRequire (node, handlers) {
            this.visit(node.source, handlers);
            }
-      
+
            visitDebugger (node, handlers) {
            // no child nodes
            }
@@ -54282,7 +54282,7 @@ var require_Builder = __commonJS({
                   '$base-color': ''
               }
           }
-       * 
+       *
        */
       build(file, callback) {
         var me2 = this, context, sassFile, split, vars;
