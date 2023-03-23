@@ -1,13 +1,14 @@
 {
   "name": "fashion-cli",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "",
   "bin": {
     "fashion": "/fashion.js"
   },
   "files": [
     "lib",
-    "fashion.js"
+    "fashion.js",
+    "defaults.json"
   ],
   "publishConfig": {
     "registry": "https://nxs.sigma-it.ru/repository/npm-sigma-release/"
