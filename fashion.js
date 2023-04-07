@@ -52551,7 +52551,8 @@ var require_Transpiler = __commonJS({
               for (var pName in declaredMap) {
                 params.push(pName);
               }
-              Fashion3.warn("function or mixin '" + id + "' had no parameter named " + argName + " : params were : " + params.join(", "));
+              Fashion3.warn(`function or mixin '${id}' had no parameter named ${argName}\n      ${arg.file}:${arg.lineNumber}`);
+
               continue;
             } else {
               position = declaredMap[argName].position;
